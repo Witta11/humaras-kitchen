@@ -1,0 +1,9 @@
+<div class="index-page-container">
+  <div class="cards">
+  <% @recipes.each do |recipe| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= recipe.photo %>)">
+      <a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a>
+    </div>
+  <% end %>
+</div>
+</div>

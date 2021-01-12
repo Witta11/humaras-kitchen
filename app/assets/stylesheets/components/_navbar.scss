@@ -1,0 +1,107 @@
+.navbar-container {
+  margin-bottom: 40px;
+}
+
+.navbar-hum {
+  background: $nav-blue;
+  height: 90px;
+}
+
+.logo {
+  color: white;
+  font-family: $logo-font !important;
+  padding-top: 16px;
+  font-size: 4em;
+  margin: 0 auto;
+}
+
+.logo p {
+  margin: 0;
+  text-align: center;
+}
+
+.tabs {
+  margin: 40px;
+}
+
+.tab-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.tab-item {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.tab-link {
+  font-family: $headers-font;
+  font-size: 24px;
+  padding-left: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.tab-link:hover {
+  color: grey;
+}
+
+.tab-link-fix {
+  font-family: $headers-font;
+  font-size: 32px;
+  margin-bottom: 0;
+  // margin-right: 16px;
+  // margin-left: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.tab-link-fix {
+  margin: 0;
+}
+
+.tab-link-fix:hover {
+  color: black;
+}
+
+.active {
+  background-color: white !important;
+  color: black !important;
+  text-decoration: underline;
+}
+
+
+// Search Bar in Navbar
+
+.search-control {
+  display: flex;
+  // width: 550px;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.search-bar {
+  font-family: $headers-font;
+  border: 1px solid $but-pink !important;
+  width: 320px;
+  padding: 5px;
+  border-radius: 4px 0 0 4px;
+}
+
+.button-search {
+  border-top: 1px solid $but-pink;
+  border-bottom: 1px solid $but-pink;
+  border-right: 1px solid $but-pink;
+  border-left: none;
+  font-size: 20px;
+  padding: 2px;
+  padding-right: 8px;
+  padding-left: 8px;
+  color: $but-pink;
+  background: white;
+  border-radius: 0 4px 4px 0;
+}
+
+

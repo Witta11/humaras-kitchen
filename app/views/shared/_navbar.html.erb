@@ -1,0 +1,36 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-hum">
+  <div class="logo">
+    <p>Humaras's Kitchen</p>
+  </div>
+</div>
+<div class="page-container">
+  <div class="tabs">
+    <ul class="tab-items">
+      <li class="tab-item">
+        <p class="tab-link-fix">Humara's Kitchen</p>
+      </li>
+      <li class="tab-item">
+        <a class="tab-link" href="/">HOME</a>
+      </li>
+      <li class="tab-item">
+        <a class="tab-link" href="/recipes">All Recipes</a>
+      </li>
+      <li class="tab-item">
+        <a class="tab-link" href="/about">About Me</a>
+      </li>
+      <li class="tab-item">
+        <a class="tab-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+      </li>
+      <%= form_tag recipes_path, class: "search-control", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "search-bar",
+          placeholder: "Search a recipe..."
+        %>
+          <div class="input-group-append">
+            <button class="button-search" type="submit"><i class="fas fa-search search"></i></button>
+          </div>
+      <% end %>
+    </ul>
+  </div>
+</div>

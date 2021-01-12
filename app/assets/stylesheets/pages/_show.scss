@@ -1,0 +1,19 @@
+.show-container {
+  display: flex;
+}
+
+.recipe-photo {
+  height: 500px;
+  width: 400px;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-right: 40px;
+}
+
+.recipe-description {
+  word-break: break-word;
+  width: 50%;
+}

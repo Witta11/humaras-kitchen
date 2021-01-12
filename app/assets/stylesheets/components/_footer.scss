@@ -1,0 +1,114 @@
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  text-align: center;
+  justify-content: flex-end;
+  height: 90px;
+  padding: 0px 50px;
+  background: $nav-blue;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  // margin: 0 auto;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: grey;
+}
+
+.footer-links p {
+  color: white;
+  font-family: $body-font;
+  margin: 0;
+  padding-right: 8px;
+}
+
+.footer .fa-heart {
+  color: #D23333;
+}
+
+.get-email {
+  background-color: #C6AFB1;
+  margin-top: 80px;
+  height: 180px;
+}
+
+.get-email-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.footer-text-header {
+  font-size: 32px;
+  font-family: $body-font;
+  color: $nav-blue;
+  margin-bottom: 0;
+}
+
+.footer-text-para {
+  font-size: 19px;
+  font-family: $body-font;
+  color: $nav-blue;
+}
+
+.impressum {
+  display: flex;
+  align-items: center;
+}
+
+.impressum a {
+  font-size: 16px;
+  font-family: $body-font;
+  color: white;
+  text-decoration: none;
+  padding-left: 8px;
+}
+
+.impressum a:hover {
+  opacity: 1;
+  color: grey;
+}
+
+
+// email input footer
+
+.email-control {
+  display: flex;
+  // width: 550px;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.email-bar {
+  font-family: $headers-font;
+  border: 1px solid $but-pink !important;
+  width: 320px;
+  padding: 5px;
+  border-radius: 4px 0 0 4px;
+}
+
+.button-sent {
+  border-top: 1px solid $but-pink;
+  border-bottom: 1px solid $but-pink;
+  border-right: 1px solid $but-pink;
+  border-left: none;
+  font-size: 20px;
+  padding: 2px;
+  padding-right: 8px;
+  padding-left: 8px;
+  color: $but-pink;
+  background: white;
+  border-radius: 0 4px 4px 0;
+}
