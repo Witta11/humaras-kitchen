@@ -1,15 +1,23 @@
+.blog-container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 220px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin: 32px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 220px;
   object-fit: cover;
 }
 
