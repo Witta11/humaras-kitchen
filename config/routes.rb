@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :recipes, only: [:show, :index]
   get 'about', to: 'pages#about'
+  get 'blog', to: 'pages#blog'
 end
