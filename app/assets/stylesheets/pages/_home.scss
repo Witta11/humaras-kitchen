@@ -1,16 +1,87 @@
-// Specific CSS for your home-page
-.d-block {
-
+body {
+  background-color: #f0ebeb;
+  background-image: -webkit-linear-gradient(64deg, #f7f4f5 50%, #f0ebeb 50%);
+  min-height: 500px;
 }
 
-
-.carousel-inner {
-  height: 400px;
+.slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.slider-image {
-  background-position: center;
-  background-size: cover;
+.slider {
+  width: 1000px;
+  height: 350px;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  height: 350px;
+  display: flex;
+  align-items: center;
+  animation: slideshow 24s linear infinite;
+}
+
+.slide img {
+  width: 230px;
+  height: 300px;
+  padding: 0 30px 0 30px;
   object-fit: cover;
-  width: 40%;
 }
+
+@keyframes slideshow {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
+}
+
+.slider::before, .slider::after {
+  height: 350px;
+  width: 200px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+// whats new container
+
+.new-recipe-container {
+  margin-top: 46px;
+  margin-left: 280px;
+  margin-right: 280px;
+  h1 {
+    font-family: $headers-font;
+  }
+  p {
+    font-family: $body-font;
+  }
+}
+
+.new-recipe-text {
+  width: 50%;
+  word-break: break-all;
+}
+
+
+
+
+
+
+
