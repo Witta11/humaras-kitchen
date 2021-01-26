@@ -1,21 +1,24 @@
-.navbar-container {
-  margin-bottom: 40px;
-}
-
-.navbar-hum {
+.logo-container {
   background: $nav-blue;
   height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
+#logo {
+  width: 100px;
+  margin-right: 18px;
+}
+
+.logo-header {
   color: white;
   font-family: $logo-font !important;
-  padding-top: 16px;
+  // padding-top: 16px;
   font-size: 4em;
-  margin: 0 auto;
 }
 
-.logo p {
+.logo-header p {
   margin: 0;
   text-align: center;
 }
@@ -29,12 +32,13 @@
   align-items: center;
   justify-content: center;
   list-style-type: none;
+  padding: 0;
 }
 
-.tab-item {
-  padding-left: 8px;
-  padding-right: 8px;
-}
+// .tab-item {
+//   padding-left: 8px;
+//   padding-right: 8px;
+// }
 
 .tab-link {
   font-family: $headers-font;
@@ -42,6 +46,8 @@
   padding-left: 16px;
   color: black;
   text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .tab-link:hover {
@@ -52,8 +58,7 @@
   font-family: $headers-font;
   font-size: 32px;
   margin-bottom: 0;
-  // margin-right: 16px;
-  // margin-left: 16px;
+  padding-right: 20px;
   color: black;
   text-decoration: none;
 }
@@ -85,7 +90,7 @@
 .search-bar {
   font-family: $headers-font;
   border: 1px solid $but-pink !important;
-  width: 320px;
+  width: 260px;
   padding: 5px;
   border-radius: 4px 0 0 4px;
 }
