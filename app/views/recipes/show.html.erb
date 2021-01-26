@@ -4,4 +4,10 @@
     <h1><%= @recipe.title %></h1>
     <p><%= @recipe.description %></p>
   </div>
+  <ul class="list-group">
+  <% @recipe.comments.each do |review| %>
+    <li class="list-group-item"><%= review.name %></li>
+    <li class="list-group-item"><%= review.comment %></li>
+  <% end %>
+  </ul>
 </div>
