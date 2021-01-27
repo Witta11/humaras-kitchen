@@ -1,8 +1,12 @@
 .index-page-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  margin-top: 40px;
+  margin-left: 400px;
+  margin-right: 400px;
   padding-left: 100px;
   padding-right: 100px;
-  // margin-left: 62px;
-  // margin-right: 62px;
 }
 
 .card-category {

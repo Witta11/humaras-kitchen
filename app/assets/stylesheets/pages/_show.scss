@@ -1,19 +1,236 @@
-.show-container {
+.one-recipe-container {
+  min-height: 100vh;
+  margin-top: 75px;
+}
+
+.btn-back {
+  margin-left: 220px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  font-family: $body-font;
+  font-size: 18px;
+  border: 1px solid $but-pink !important;
+  color: black;
+  background-color: white;
+  padding: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+}
+
+.btn-back:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.show-container-top {
   display: flex;
+  justify-content: space-between;
+  margin-left: 220px;
+  margin-right: 220px;
+  margin-top: 24px;
+  height: 560px
+}
+
+.photo-box {
+  height: 560px;
+}
+
+.small-photo-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.recipe-photo-small {
+  height: 190px;
+  width: 190px;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // margin-right: 20px;
 }
 
 .recipe-photo {
-  height: 500px;
+  height: 350px;
   width: 400px;
   object-fit: cover;
   background-size: cover;
   background-position: center;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-right: 40px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .recipe-description {
   word-break: break-word;
-  width: 50%;
+  width: 350px;
+  h1 {
+    margin-top: 0;
+    font-family:$headers-font;
+  }
+  p {
+    font-family:$body-font;
+  }
+}
+
+.recipe-preview {
+  border: 1px solid $but-pink !important;
+  padding: 8px;
+  border-radius: 4px;
+  height: 740px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.preview {
+  border-radius: 4px;
+  height: 120px;
+  width: 220px;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-link {
+  text-decoration: none;
+}
+
+.preview-link:hover {
+  transition: 0.9s;
+  transform: scale(1.1);
+}
+
+.preview-title {
+  color: white;
+  font-family: $headers-font;
+  text-align: center;
+  margin: 0;
+}
+
+// Comment View Section
+
+.show-container-bottom {
+  margin-left: 220px;
+  margin-right: 350px;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  padding: 24px;
+  font-family: $headers-font;
+  font-size: 18px;
+  border: 1px solid $but-pink !important;
+  border-radius: 4px;
+  width: 600px;
+}
+
+.comments-header {
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+.comment-box {
+  min-height: 60px;
+  max-height: 266px;
+  overflow-y: scroll;
+}
+
+.comment-box::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.comment-box::-webkit-scrollbar:vertical {
+    width: 8px;
+}
+
+.comment-box::-webkit-scrollbar:horizontal {
+    height: 8px;
+}
+
+.comment-box::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid #f0ebeb; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.comment-single {
+  font-family:$body-font;
+  border: 1px solid $but-pink !important;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  margin-bottom: 8px;
+  height: 60px;
+  h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  p {
+    font-size: 16px;
+    margin: 0;
+    margin-top: 4px;
+  }
+}
+
+// Comment Form Section
+
+.comment-section {
+  font-family:$headers-font;
+  font-size: 18px;
+  border-radius: 4px;
+  width: 520px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#comment_name {
+  font-family:$body-font;
+  font-size: 18px;
+  border: 1px solid $but-pink !important;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  width: 250px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#comment_comment {
+  font-family:$body-font;
+  font-size: 18px;
+  border: 1px solid $but-pink !important;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  min-width: 503px;
+  max-width: 503px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.btn-comment-submit {
+  font-family: $headers-font;
+  font-size: 18px;
+  border: 1px solid $but-pink !important;
+  padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.btn-comment-submit:hover {
+  transition: 0.9s;
+  transform: scale(1.1);
 }

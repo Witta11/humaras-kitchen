@@ -1,7 +1,42 @@
-<div class="show-container">
-  <div class="recipe-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @recipe.photo %>)"></div>
-  <div class="recipe-description">
-    <h1><%= @recipe.title %></h1>
-    <p><%= @recipe.description %></p>
+<div class="one-recipe-container">
+<%= link_to 'Back', recipes_path, class:"btn-back" %>
+  <div class="show-container-top">
+    <div class="photo-box">
+      <div class="recipe-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @recipe.photo %>)"></div>
+      <div class="small-photo-box">
+        <div class="recipe-photo-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @recipe.photo %>)"></div>
+        <div class="recipe-photo-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @recipe.photo %>)"></div>
+      </div>
+    </div>
+    <div class="recipe-description">
+      <h1><%= @recipe.title %></h1>
+      <p><%= @recipe.description %></p>
+    </div>
+    <div class="recipe-preview">
+      <% @recipes.each do |recipe| %>
+      <a href="/recipes/<%= recipe.id %>" class="preview-link"><div class="preview" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= recipe.photo %>)"><h2 class="preview-title"><%= recipe.title %></h2></div></a>
+      <% end %>
+    </div>
+  </div>
+  <div class="show-container-bottom">
+    <% if @recipe.comments.count == 1 %>
+      <h1 class="comments-header"><%= @recipe.comments.count %> Comment</h1>
+    <% else %>
+      <h1 class="comments-header"><%= @recipe.comments.count %> Comments</h1>
+    <% end %>
+    <div class="comment-box">
+      <% @recipe.comments.each do |recipe| %>
+      <div class="comment-single">
+        <h2><%= recipe.name %></h2>
+        <p><%= recipe.comment %>
+        <%= link_to "Delete",
+          comment_path(recipe.id),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+        </p>
+      </div>
+      <% end %>
+    </div>
+    <%= render 'comments/form' %>
   </div>
 </div>
