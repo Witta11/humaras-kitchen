@@ -1,5 +1,18 @@
-<%= simple_form_for [ @recipe, @comment ] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :comment %>
-  <%= f.submit "Submit Comment", class: "btn btn-primary" %>
-<% end %>
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="comments-header">Leave a Comment</h1>
+      </div>
+      <div class="modal-body">
+          <%= simple_form_for ([ @recipe, @recipe.comments.build]), class:"comment-form" do |f| %>
+          <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+          <%= f.input :name, label: false, required: true, placeholder: "Your name", class:"comment-form-name", input_html: { value: params[:name] }  %>
+          <%= f.input :comment, label: false, required: true, placeholder: "Tell us about your experience", class:"comment-form-text" %>
+          <%= f.submit "Submit", class: "btn-comment-submit" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

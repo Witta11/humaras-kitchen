@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    # raise
     @comment = Comment.new(comment_params)
     @recipe = Recipe.find(params[:recipe_id])
     @comment.recipe = @recipe
@@ -14,6 +15,12 @@ class CommentsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to recipe_path(@comment.recipe)
   end
 
   private

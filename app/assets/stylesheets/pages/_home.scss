@@ -4,6 +4,15 @@ body {
   min-height: 500px;
 }
 
+.home-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  margin-top: 40px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
 .slide-container {
   display: flex;
   align-items: center;

@@ -1,7 +1,4 @@
 class RecipesController < ApplicationController
-  def show
-    @recipe = Recipe.find(params[:id])
-  end
 
   def index
     if params[:query].present?
@@ -10,5 +7,10 @@ class RecipesController < ApplicationController
     else
       @recipes = Recipe.all
     end
+  end
+
+  def show
+    @recipe = Recipe.find(params[:id])
+    @recipes = Recipe.first(5)
   end
 end
