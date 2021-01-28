@@ -1,9 +1,7 @@
 <div class="comment-section">
   <h1 class="comments-header">Leave a Comment</h1>
   <%= simple_form_for ([ @recipe, @recipe.comments.build]), class:"comment-form" do |f| %>
-    <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-    <%= f.input :name, label: false, required: true, placeholder: "Your name", class:"comment-form-name" %>
+    <%= f.input :name, label: false, required: true, placeholder: "Your name", class:"comment-form-name"%>
     <%= f.input :comment, label: false, required: true, placeholder: "Tell us about your experience", class:"comment-form-text" %>
     <%= f.submit "Submit", class: "btn-comment-submit" %>
   <% end %>
