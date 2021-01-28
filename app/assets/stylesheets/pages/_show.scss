@@ -18,6 +18,24 @@
   border-radius: 4px;
 }
 
+.btn-back-modal {
+  text-decoration: none;
+  font-family: $body-font;
+  font-size: 18px;
+  border: 1px solid $but-pink !important;
+  color: black;
+  background-color: white;
+  padding: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+}
+
+.comments-header {
+  font-family: $headers-font;
+  margin-top: 21px !important;
+}
+
 .btn-back:hover {
   background-color: transparent;
   color: white;
@@ -25,7 +43,7 @@
 
 .show-container-top {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   margin-left: 220px;
   margin-right: 220px;
   margin-top: 24px;
@@ -71,7 +89,7 @@
   width: 350px;
   h1 {
     margin-top: 0;
-    font-family:$headers-font;
+    font-family: $headers-font;
   }
   p {
     font-family:$body-font;
@@ -233,4 +251,32 @@
 .btn-comment-submit:hover {
   transition: 0.9s;
   transform: scale(1.1);
+}
+
+
+@media screen and (min-width: 1400px) {
+
+}
+
+@media screen and (min-width: 1600px) {
+  .show-container-top {
+    margin-left: 440px;
+  }
+  .btn-back {
+    margin-left: 440px;
+  }
+  .show-container-bottom {
+    margin-left: 440px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .show-container-top {
+    margin-left: 440px;
+  }
+  .btn-back {
+    margin-left: 440px;
+  }
+  .show-container-bottom {
+    margin-left: 440px;
+  }
 }

@@ -3,6 +3,10 @@ class CommentsController < ApplicationController
   def new
     @recipe = Recipe.find(params[:recipe_id])
     @comment = Comment.new
+    # if params[:name]
+    #   @name = params[:name]
+    #   @comment.name = @name
+    # end
   end
 
   def create
@@ -13,6 +17,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to recipe_path(@recipe)
     else
+      # raise
       render :new
     end
   end
