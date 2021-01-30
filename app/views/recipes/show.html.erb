@@ -2,10 +2,10 @@
 <%= link_to 'Back', recipes_path, class:"btn-back" %>
   <div class="show-container-top">
     <div class="photo-box">
-      <div class="recipe-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @recipe.photo %>)"></div>
+      <div class="recipe-photo" style="background-image: url(<%= @recipe.photo %>)"></div>
       <div class="small-photo-box">
-        <div class="recipe-photo-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @recipe.photo %>)"></div>
-        <div class="recipe-photo-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @recipe.photo %>)"></div>
+        <div class="recipe-photo-small" style="background-image: url(<%= @recipe.photo %>)"></div>
+        <div class="recipe-photo-small" style="background-image: url(<%= @recipe.photo %>)"></div>
       </div>
     </div>
     <div class="recipe-description">
@@ -37,6 +37,6 @@
       </div>
       <% end %>
     </div>
-    <%= render 'comments/form', name: @name %>
+    <%= render 'comments/form' %>
   </div>
 </div>

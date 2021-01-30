@@ -6,11 +6,9 @@
         <h1 class="comments-header">Leave a Comment</h1>
       </div>
       <div class="modal-body">
-          <%= simple_form_for ([ @recipe, @recipe.comments.build]), class:"comment-form" do |f| %>
-          <%= f.error_notification %>
-          <%= f.object.errors.full_messages.join(", ") if f.object.errors.any? %>
-          <%= f.input :name, error: f.object.errors.full_messages_for(:name).to_sentence, label: false, placeholder: "Your name", class:"comment-form-name" %>
-          <%= f.input :comment, error: f.object.errors.full_messages_for(:comment).to_sentence, label: false, required: true, placeholder: "Tell us about your experience", class:"comment-form-text" %>
+          <%= simple_form_for ([@recipe, @comment]), class:"comment-form" do |f| %>
+          <%= f.input :name, label: false, placeholder: "Your name", input_html: { value: @comment.name } %>
+          <%= f.input :comment, label: false, placeholder: "Tell us about your experience", input_html: { value: @comment.comment } %>
           <%= f.submit "Submit", class: "btn-comment-submit" %>
         <% end %>
       </div>

@@ -2,11 +2,9 @@
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
-  margin-top: 40px;
-  margin-left: 400px;
-  margin-right: 400px;
-  // padding-left: 100px;
-  // padding-right: 100px;
+  margin-top: 64px;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
 .card-category {
@@ -43,7 +41,7 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 24px;
 }
 
 // Smallest device
