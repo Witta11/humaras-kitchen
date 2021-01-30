@@ -149,7 +149,7 @@
   font-size: 18px;
   border: 1px solid $but-pink !important;
   border-radius: 4px;
-  width: 600px;
+  width: 520px;
 }
 
 .comments-header {
@@ -162,6 +162,7 @@
   min-height: 60px;
   max-height: 266px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .comment-box::-webkit-scrollbar {
@@ -203,8 +204,15 @@
 
 // Comment Form Section
 
+.error {
+  font-family: $body-font;
+  font-size: 18px;
+  display: flex;
+  margin-bottom: 8px;
+}
+
 .comment-section {
-  font-family:$headers-font;
+  font-family: $headers-font;
   font-size: 18px;
   border-radius: 4px;
   width: 520px;
@@ -213,7 +221,7 @@
 }
 
 #comment_name {
-  font-family:$body-font;
+  font-family: $body-font;
   font-size: 18px;
   border: 1px solid $but-pink !important;
   padding: 8px;
@@ -225,7 +233,7 @@
 }
 
 #comment_comment {
-  font-family:$body-font;
+  font-family: $body-font;
   font-size: 18px;
   border: 1px solid $but-pink !important;
   padding: 8px;
@@ -238,6 +246,7 @@
 }
 
 .btn-comment-submit {
+  margin-top: 8px;
   font-family: $headers-font;
   font-size: 18px;
   border: 1px solid $but-pink !important;

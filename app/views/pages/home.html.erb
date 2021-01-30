@@ -11,19 +11,30 @@
         <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
       </div>
       <div class="slide">
-        <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
         <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
         <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
         <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
         <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
+        <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
         <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
         <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
       </div>
     </div>
   </div>
-  <div class="new-recipe-container">
-    <h1>What's new?</h1>
-    <p class="new-recipe-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, omnis possimus adipisci corrupti? Reprehenderit repudiandae ut quasi sequi. Alias tenetur architecto nulla vel ipsum libero praesentium velit pariatur temporibus unde? </p>
+  <div class="new-recipe-box">
+    <div class="new-recipe-description">
+      <h1 id="new-recipe-header">What's new?</h1>
+      <h1><%= @recipe.title%></h1>
+      <p><%= @recipe.description%></p>
+      <h1>Comments</h1>
+<div class="comment-box">
+  <% @recipe.comments.each do |recipe| %>
+  <div class="comment-single">
+    <h2><%= recipe.name %></h2>
+    <p><%= recipe.comment %></p>
   </div>
+  <% end %>
 </div>
-
+    </div>
+    <div class="new-recipe-photo" style="background-image: url(<%= @recipe.photo %>)"></div>
+</div>

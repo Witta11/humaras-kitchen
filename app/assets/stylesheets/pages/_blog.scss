@@ -1,16 +1,18 @@
 .blog-container {
   display: grid;
+  justify-content: center;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
   margin-top: 40px;
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 350px;
+  margin-right: 350px;
 
 }
 
 .card-product {
   overflow: hidden;
   height: 220px;
+  width: 550px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
