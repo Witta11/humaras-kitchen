@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   def home
     @recipes = Recipe.all
     @recipe = Recipe.last

@@ -2,10 +2,24 @@
   background: #F4F4F4;
   display: flex;
   text-align: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 90px;
   padding: 0px 50px;
   background: $nav-blue;
+}
+
+.right {
+  display: flex;
+}
+
+.copy {
+  color: white;
+  font-size: 24px;
+  padding: 0px 10px;
+  font-size: 16px;
+  font-family: $body-font;
+  display: flex;
+  align-items: center;
 }
 
 .footer-links {
@@ -111,4 +125,30 @@
   color: $but-pink;
   background: white;
   border-radius: 0 4px 4px 0;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 100px) and (max-width: 575px) {
+  .footer p, a {
+    font-size: 16px;
+  }
+  .impressum {
+    display: none;
+  }
+  .follow {
+    display: none;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+  .footer p, a {
+    font-size: 16px;
+  }
+  .impressum {
+    display: none;
+  }
+  .follow {
+    display: none;
+  }
 }
