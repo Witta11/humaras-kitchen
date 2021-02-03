@@ -6,7 +6,16 @@
         <p class="footer-text-header">Don't miss a recipe!</p>
         <p class="footer-text-para">get new posts via email:</p>
       </div>
-
+        <%= form_tag new_user_path, class: "email-control", method: :get do %>
+        <%= text_field_tag :email,
+          params[:email],
+          class: "email-bar",
+          placeholder: "Type your email..."
+        %>
+        <div class="input-group-append">
+          <button type="submit" class="button-sent" data-bs-toggle="modal" data-bs-target="#login-popup"><i class="far fa-paper-plane"></i></button>
+        </div>
+        <% end %>
     </div>
   </div>
 </div>
