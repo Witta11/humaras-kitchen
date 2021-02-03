@@ -1,0 +1,17 @@
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <%= link_to 'Back', root_path, class:"btn-back-modal" %>
+        <h1 class="comments-header">Subscribe to Newsletter</h1>
+      </div>
+      <div class="modal-body">
+          <%= simple_form_for @user, class:"comment-form" do |f| %>
+          <%= f.input :name, label: false, placeholder: "Your name" %>
+          <%= f.input :email, label: false, placeholder: "Your email", input_html: { value: @email } %>
+          <%= f.submit "Submit", class: "btn-comment-submit" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

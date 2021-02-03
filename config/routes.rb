@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :recipes, only: [:show, :index] do
     resources :comments, only: [:new, :create]
   end
+  resources :users, only: [:new, :create, :destroy]
   resources :comments, only: [:destroy]
   get 'about', to: 'pages#about'
   get 'blog', to: 'pages#blog'

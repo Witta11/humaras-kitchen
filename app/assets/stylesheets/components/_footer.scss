@@ -69,12 +69,14 @@
   font-family: $body-font;
   color: $nav-blue;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .footer-text-para {
   font-size: 19px;
   font-family: $body-font;
   color: $nav-blue;
+  margin: 0;
 }
 
 .impressum {
@@ -126,6 +128,22 @@
   background: white;
   border-radius: 0 4px 4px 0;
 }
+
+// NEW EMAIL REGISTRATION FORM
+
+#user_name, #user_email {
+  font-family: $body-font;
+  font-size: 18px;
+  border: 1px solid $but-pink !important;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  width: 250px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 100px) and (max-width: 575px) {
