@@ -10,6 +10,7 @@
 
 .right {
   display: flex;
+  // margin-right: 310px;
 }
 
 .copy {
@@ -20,6 +21,7 @@
   font-family: $body-font;
   display: flex;
   align-items: center;
+  // margin-left: 310px;
 }
 
 .footer-links {
@@ -59,7 +61,7 @@
 
 .get-email-content {
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
   padding: 48px 0;
 }
@@ -109,9 +111,10 @@
 
 .email-bar {
   font-family: $headers-font;
+  font-size: 15px;
   border: 1px solid $but-pink !important;
   width: 320px;
-  padding: 5px;
+  padding: 9px;
   border-radius: 4px 0 0 4px;
 }
 
@@ -121,7 +124,7 @@
   border-right: 1px solid $but-pink;
   border-left: none;
   font-size: 20px;
-  padding: 2px;
+  padding: 7px;
   padding-right: 8px;
   padding-left: 8px;
   color: $but-pink;
@@ -156,6 +159,9 @@
   .follow {
     display: none;
   }
+  .copy , .right {
+    margin: 0;
+  }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -168,5 +174,20 @@
   }
   .follow {
     display: none;
+  }
+  .copy , .right {
+    margin: 0;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1025px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .copy , .right {
+    margin: 0;
   }
 }

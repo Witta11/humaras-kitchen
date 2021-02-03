@@ -1,40 +1,47 @@
 <div class="home-container">
-  <div class="slide-container">
-    <div class="slider">
-      <div class="slide">
-        <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
-      </div>
-      <div class="slide">
-        <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food2.png", alt: "Recipe Photo") %></a>
-        <a href=""><%= image_tag("food1.png", alt: "Recipe Photo") %></a>
-      </div>
-    </div>
+  <div class="recipes-container">
+    <% @recipes.each do |f| %>
+    <a href="/recipes/<%= f.id %>" class="home-recipe-card"><div class="home-recipe-card-div">
+      <img class="home-recipe-card-photo" src="<%= f.photo %>" alt="">
+      <h2 class="home-recipe-card-title"><b><%= f.title %></b></h2>
+    </div></a>
+    <% end %>
   </div>
+
+  <div class="get-email-content-between">
+    <%= image_tag("rice-bowl.png", size: "80x80", alt: "Edit Entry") %>
+    <div class="footer-text">
+      <p class="footer-text-header">Stay updated?</p>
+      <p class="footer-text-para">get new recipes via email:</p>
+    </div>
+    <%= form_tag new_user_path, class: "email-control", method: :get do %>
+    <%= text_field_tag :email,
+      params[:email],
+      class: "email-bar",
+      placeholder: "Type your email..."
+    %>
+    <div class="input-group-append">
+      <button type="submit" class="button-sent" data-bs-toggle="modal" data-bs-target="#login-popup"><i class="far fa-paper-plane"></i></button>
+    </div>
+    <% end %>
+  </div>
+
   <div class="new-recipe-box">
     <div class="new-recipe-description">
       <h1 id="new-recipe-header">What's new?</h1>
       <h1><%= @recipe.title%></h1>
       <p><%= @recipe.description%></p>
-      <h1 class="comment-title">Comments</h1>
-<div class="comment-box">
-  <% @recipe.comments.each do |recipe| %>
-  <div class="comment-single">
-    <h2><%= recipe.name %></h2>
-    <p><%= recipe.comment %></p>
-  </div>
-  <% end %>
-</div>
     </div>
-    <div class="new-recipe-photo" style="background-image: url(<%= @recipe.photo %>)"></div>
+    <a href="/recipes/<%= @recipe.id %>"><div class="new-recipe-photo" style="background-image: url(<%= @recipe.photo %>)"></div></a>
+    <div class="new-recipe-comments">
+      <h1 class="comment-title">Comments</h1>
+      <div class="comment-box">
+        <% @recipe.comments.each do |recipe| %>
+        <div class="comment-single">
+          <h2><%= recipe.name %></h2>
+          <p><%= recipe.comment %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
 </div>
