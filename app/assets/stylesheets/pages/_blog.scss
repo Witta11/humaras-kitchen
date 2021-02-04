@@ -6,7 +6,6 @@
   margin-top: 40px;
   margin-left: 350px;
   margin-right: 350px;
-
 }
 
 .card-product {
@@ -48,35 +47,29 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 100px) and (max-width: 575px) {
-  .about-container {
-    display: block;
-    min-height: 0;
-    grid-template-rows: 0;
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;;
     margin: 0;
-    margin-top: 0;
-    padding: 24px;
+  }
+  .card-product {
+    height: 200px;
+    width: 300px;
+  }
+  .card-product img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 576px) and (max-width: 767px) {
-  .about-container {
-    display: block;
-    min-height: 0;
-    grid-template-rows: 0;
-    margin: 0;
-    margin-top: 0;
-    padding: 24px;
-  }
+
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 1025px) {
-  .about-container {
-    min-height: 0;
-    grid-template-rows: 0;
-    margin: 0;
-    margin-top: 0;
-    padding: 24px;
-  }
+
 }
