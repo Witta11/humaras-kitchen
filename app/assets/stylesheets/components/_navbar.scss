@@ -11,10 +11,10 @@
   margin-right: 18px;
 }
 
-.logo-header {
+.logo-header a {
   color: white;
   font-family: $logo-font !important;
-  // padding-top: 16px;
+  text-decoration: none;
   font-size: 4em;
 }
 

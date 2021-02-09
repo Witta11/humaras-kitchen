@@ -5,6 +5,15 @@
   margin-top: 40px;
   margin-left: 400px;
   margin-right: 400px;
+}
+
+.about-text {
+  h1 {
+    font-family: $headers-font
+  }
+  p {
+    font-family: $body-font
+  }
 
 }
 

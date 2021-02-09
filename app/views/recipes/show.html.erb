@@ -28,12 +28,7 @@
       <% @recipe.comments.each do |recipe| %>
       <div class="comment-single">
         <h2><%= recipe.name %></h2>
-        <p><%= recipe.comment %>
-        <%= link_to "Delete",
-          comment_path(recipe.id),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
-        </p>
+        <p><%= recipe.comment %></p>
       </div>
       <% end %>
     </div>
