@@ -14,7 +14,7 @@
       <p class="footer-text-header">Stay updated</p>
       <p class="footer-text-para">get new recipes via email:</p>
     </div>
-    <%= form_tag new_user_path, class: "email-control", method: :get do %>
+    <%= form_tag new_user_registration_path, class: "email-control", method: :get do %>
     <%= text_field_tag :email,
       params[:email],
       class: "email-bar",

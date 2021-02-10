@@ -4,6 +4,10 @@ body {
   min-height: 500px;
 }
 
+.page-container {
+  height: 100vh;
+}
+
 .content-container {
   min-height: 50vh;
 }
@@ -30,6 +34,9 @@ body {
 
 .home-recipe-card-div {
   height: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 12px;
 }
 
 .home-recipe-card-photo {

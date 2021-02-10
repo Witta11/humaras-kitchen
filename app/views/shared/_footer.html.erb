@@ -6,7 +6,7 @@
         <p class="footer-text-header">Don't miss a recipe!</p>
         <p class="footer-text-para">get new posts via email:</p>
       </div>
-        <%= form_tag new_user_path, class: "email-control", method: :get do %>
+        <%= form_tag new_user_registration_path, class: "email-control", method: :get do %>
         <%= text_field_tag :email,
           params[:email],
           class: "email-bar",
